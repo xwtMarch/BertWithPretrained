@@ -55,7 +55,7 @@ class ModelConfig:
             logging.info(f"###  {key} = {value}")
 
 
-def accuracy(logits, y_true, ignore_idx=-100):
+def accuracy(logits, y_true, ignore_idx=-100): # 预测值logits 真实值y_true 忽略特定值ignore_idx 计算准确率，并返回准确率以及经过筛选后的真实标签和预测标签
     """
     :param logits:  [src_len,batch_size,num_labels]
     :param y_true:  [src_len,batch_size]
